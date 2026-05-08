@@ -1,0 +1,29 @@
+# Build outputs
+/build/
+/app/build/
+.gradle/
+*.iml
+.cxx/
+
+# IDE
+.idea/
+*.iws
+*.ipr
+
+# Local config — never commit (contains secrets / machine-specific paths)
+local.properties
+keystore.properties
+*.jks
+*.keystore
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+*.hprof
+
+# Captures
+/captures/
+.externalNativeBuild/

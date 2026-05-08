@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Centered "J" letter in brand gold -->
+    <group android:translateX="0" android:translateY="0">
+        <path
+            android:fillColor="#D4AF37"
+            android:pathData="M62.5,30 L62.5,66 C62.5,72.5 58.5,77 51,77 C44,77 40,73 38,67.5 L46.5,64.5 C47.5,68 49,70 51,70 C53,70 54,68.5 54,65 L54,30 Z" />
+        <!-- Subtle gold accent dot (top of J — like a serif tittle) -->
+        <path
+            android:fillColor="#E8C97A"
+            android:pathData="M58.25,28 L66.75,28 L66.75,33.5 L58.25,33.5 Z" />
+    </group>
+</vector>

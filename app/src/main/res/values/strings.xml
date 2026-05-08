@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">JuristHub</string>
+    <string name="app_tagline">Law · Research · Code</string>
+    <string name="splash_logo_desc">JuristHub logo</string>
+</resources>

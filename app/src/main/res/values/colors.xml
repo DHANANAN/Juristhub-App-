@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand palette -->
+    <color name="brand_bg">#0C1020</color>
+    <color name="brand_bg_2">#10102A</color>
+    <color name="brand_surface">#141D2E</color>
+    <color name="brand_surface_2">#1A1A3F</color>
+    <color name="brand_border">#1E3254</color>
+    <color name="brand_gold">#D4AF37</color>
+    <color name="brand_gold_hi">#E8C97A</color>
+    <color name="brand_gold_dark">#B8941E</color>
+    <color name="brand_text">#EEF3F9</color>
+    <color name="brand_text_2">#C8DDF0</color>
+    <color name="brand_text_3">#8AA0BA</color>
+    <color name="ic_launcher_background">#0C1020</color>
+
+    <!-- Generic -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

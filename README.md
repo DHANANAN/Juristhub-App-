@@ -7,7 +7,7 @@
 | | |
 | --- | --- |
 | **Package** | `com.juristhub.app` |
-| **Version** | 1.10 (`versionCode` 2) |
+| **Version** | 1.11 (`versionCode` 3) |
 | **minSdk** | 21 (Android 5.0) |
 | **targetSdk** | 35 (Android 15) |
 | **compileSdk** | 35 |
@@ -17,8 +17,8 @@
 
 | File | Size | Path |
 | --- | --- | --- |
-| App Bundle (Play Store) | ~4 MB | [`releases/JuristHub-v1.10-release.aab`](releases/JuristHub-v1.10-release.aab) |
-| Side-load APK | ~5 MB | [`releases/JuristHub-v1.10-release.apk`](releases/JuristHub-v1.10-release.apk) |
+| App Bundle (Play Store) | ~4 MB | [`releases/JuristHub-v1.11-release.aab`](releases/JuristHub-v1.11-release.aab) |
+| Side-load APK | ~5 MB | [`releases/JuristHub-v1.11-release.apk`](releases/JuristHub-v1.11-release.apk) |
 | Play Store icon (512×512) | — | [`play-store-icon-512.png`](play-store-icon-512.png) |
 
 Both artifacts are signed with the upload key (see fingerprint below). Upload the **AAB** to Google Play; the APK is for direct install / QA.

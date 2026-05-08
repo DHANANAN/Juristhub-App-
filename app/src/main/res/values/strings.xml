@@ -3,4 +3,5 @@
     <string name="app_name">JuristHub</string>
     <string name="app_tagline">Law · Research · Code</string>
     <string name="splash_logo_desc">JuristHub logo</string>
+    <string name="close_browser">Close in-app browser</string>
 </resources>

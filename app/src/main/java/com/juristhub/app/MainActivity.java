@@ -51,20 +51,23 @@ public class MainActivity extends AppCompatActivity {
                     return true;
                 }
 
-                // In-app navigation: own domain + common subresources we expect to render inline
+                // Same-shell navigation: stay inside the main WebView for our own domain
+                // and immediate subresources.
                 if (url.contains("djlexfolio.tech")
-                        || url.contains("dhananan.github.io")
-                        || url.contains("github.io")
-                        || url.contains("ai.studio")
-                        || url.contains("vercel.app")) {
+                        || url.contains("dhananan.github.io")) {
                     view.loadUrl(url);
                     return true;
                 }
 
-                // External link — open in user's default browser
+                // Anything else (http/https) — keep the user inside the app by opening
+                // the URL in our InAppBrowserActivity instead of throwing them out to
+                // Chrome. Covers AI Studio applets (Aura Praxis, Juris Lens), GitHub
+                // pages, vercel previews, etc.
                 if (url.startsWith("http://") || url.startsWith("https://")) {
                     try {
-                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+                        Intent intent = new Intent(MainActivity.this, InAppBrowserActivity.class);
+                        intent.putExtra(InAppBrowserActivity.EXTRA_URL, url);
+                        startActivity(intent);
                         return true;
                     } catch (Exception ignored) {
                     }

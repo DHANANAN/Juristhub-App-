@@ -34,6 +34,14 @@
             android:theme="@style/Theme.JuristHubApp"
             android:screenOrientation="portrait" />
 
+        <!-- In-app browser for external links (AI Studio applets, etc.) -->
+        <activity
+            android:name=".InAppBrowserActivity"
+            android:exported="false"
+            android:theme="@style/Theme.JuristHubApp"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize|keyboardHidden" />
+
     </application>
 
 </manifest>

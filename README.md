@@ -7,7 +7,7 @@
 | | |
 | --- | --- |
 | **Package** | `com.juristhub.app` |
-| **Version** | 1.11 (`versionCode` 3) |
+| **Version** | 1.20 (`versionCode` 4) |
 | **minSdk** | 21 (Android 5.0) |
 | **targetSdk** | 35 (Android 15) |
 | **compileSdk** | 35 |
@@ -17,23 +17,32 @@
 
 | File | Size | Path |
 | --- | --- | --- |
-| App Bundle (Play Store) | ~4 MB | [`releases/JuristHub-v1.11-release.aab`](releases/JuristHub-v1.11-release.aab) |
-| Side-load APK | ~5 MB | [`releases/JuristHub-v1.11-release.apk`](releases/JuristHub-v1.11-release.apk) |
+| App Bundle (Play Store) | ~4 MB | [`releases/JuristHub-v1.20-release.aab`](releases/JuristHub-v1.20-release.aab) |
+| Side-load APK | ~5 MB | [`releases/JuristHub-v1.20-release.apk`](releases/JuristHub-v1.20-release.apk) |
 | Play Store icon (512×512) | — | [`play-store-icon-512.png`](play-store-icon-512.png) |
 
 Both artifacts are signed with the upload key (see fingerprint below). Upload the **AAB** to Google Play; the APK is for direct install / QA.
 
 ## What it does
 
-It's a thin WebView wrapper. That's the entire app:
+It's a native shell with two activities — a primary WebView for the portfolio,
+and an in-app proxy browser for external links so the user never gets thrown
+out to Chrome.
 
-1. Splash screen (~1.5s) showing the gold-J-on-navy mark.
-2. Full-screen WebView pointed at `https://djlexfolio.tech`.
-3. System UI hidden (immersive). Hardware back navigates the WebView's history.
-4. External links (anything outside djlexfolio.tech / github.io) open in the user's default browser.
-5. `mailto:` and `tel:` links hand off to system apps.
+1. **Splash** (~1.5s) — gold-J-on-navy mark.
+2. **MainActivity** — full-screen WebView pointed at `https://djlexfolio.tech`.
+   System UI hidden (immersive). Hardware back navigates the WebView's history.
+3. **InAppBrowserActivity** *(new in v1.20)* — full-screen WebView with a
+   floating gold close button (top-right). Used for any link outside
+   djlexfolio.tech / dhananan.github.io. Keeps AI Studio applets (Aura Praxis,
+   Juris Lens), GitHub Pages projects, vercel previews, etc. inside the app.
+   Hardware back navigates that WebView's history; tapping the close button or
+   exhausting back history finishes the activity and returns to the main shell.
+4. `mailto:` and `tel:` links still hand off to system apps.
 
-No accounts, no analytics SDK, no Firebase, no payments, no AI APIs — just the wrapped website. Whatever data the website itself collects (analytics, cookies) is governed by the website's own policy.
+No accounts, no analytics SDK, no Firebase, no payments, no AI APIs — just the
+wrapped website plus the in-app proxy. Whatever data the wrapped sites
+themselves collect (analytics, cookies) is governed by their own policies.
 
 ## Project structure
 

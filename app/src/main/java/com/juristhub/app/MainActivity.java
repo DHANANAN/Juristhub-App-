@@ -15,7 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String HOME_URL = "https://dhananan.github.io/JuristHub/";
+    private static final String HOME_URL = "https://djlexfolio.tech";
     private WebView webView;
 
     @SuppressLint("SetJavaScriptEnabled")
@@ -51,18 +51,17 @@ public class MainActivity extends AppCompatActivity {
                     return true;
                 }
 
-                // Anything inside our domain or partner sites — load in-app
-                if (url.contains("dhananan.github.io")
-                        || url.contains("juristhub")
-                        || url.contains("legalstaan")
+                // In-app navigation: own domain + common subresources we expect to render inline
+                if (url.contains("djlexfolio.tech")
+                        || url.contains("dhananan.github.io")
                         || url.contains("github.io")
-                        || url.contains("google.com")
-                        || url.contains("ai.studio")) {
+                        || url.contains("ai.studio")
+                        || url.contains("vercel.app")) {
                     view.loadUrl(url);
                     return true;
                 }
 
-                // External link — open in user's browser
+                // External link — open in user's default browser
                 if (url.startsWith("http://") || url.startsWith("https://")) {
                     try {
                         startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));

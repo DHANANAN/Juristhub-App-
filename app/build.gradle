@@ -10,14 +10,14 @@ if (keystorePropertiesFile.exists()) {
 
 android {
     namespace 'com.juristhub.app'
-    compileSdk 34
+    compileSdk 35
 
     defaultConfig {
         applicationId "com.juristhub.app"
         minSdk 21
-        targetSdk 34
-        versionCode 1
-        versionName "1.00"
+        targetSdk 35
+        versionCode 2
+        versionName "1.10"
     }
 
     signingConfigs {

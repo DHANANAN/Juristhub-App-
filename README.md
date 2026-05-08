@@ -7,17 +7,18 @@
 | | |
 | --- | --- |
 | **Package** | `com.juristhub.app` |
-| **Version** | 1.00 (`versionCode` 1) |
+| **Version** | 1.10 (`versionCode` 2) |
 | **minSdk** | 21 (Android 5.0) |
-| **targetSdk** | 34 (Android 14) |
+| **targetSdk** | 35 (Android 15) |
+| **compileSdk** | 35 |
 | **Loads** | `https://djlexfolio.tech` |
 
 ## Latest release
 
 | File | Size | Path |
 | --- | --- | --- |
-| App Bundle (Play Store) | ~4 MB | [`releases/JuristHub-v1.00-release.aab`](releases/JuristHub-v1.00-release.aab) |
-| Side-load APK | ~5 MB | [`releases/JuristHub-v1.00-release.apk`](releases/JuristHub-v1.00-release.apk) |
+| App Bundle (Play Store) | ~4 MB | [`releases/JuristHub-v1.10-release.aab`](releases/JuristHub-v1.10-release.aab) |
+| Side-load APK | ~5 MB | [`releases/JuristHub-v1.10-release.apk`](releases/JuristHub-v1.10-release.apk) |
 | Play Store icon (512×512) | — | [`play-store-icon-512.png`](play-store-icon-512.png) |
 
 Both artifacts are signed with the upload key (see fingerprint below). Upload the **AAB** to Google Play; the APK is for direct install / QA.
@@ -97,7 +98,7 @@ The release build is signed via `keystore.properties` (gitignored). To build a s
 
 If `keystore.properties` is missing, the release build falls back to unsigned — useful for clean clones, but the resulting APK won't install.
 
-**Upload key fingerprint (v1.00):**
+**Upload key fingerprint (used since v1.00):**
 
 ```
 SHA1   : 7E:F2:8A:74:FF:AC:14:CC:FC:BA:C3:35:C8:BC:90:1A:C5:F1:3E:4B
